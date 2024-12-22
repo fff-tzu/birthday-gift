@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生日快乐！</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>生日快乐，亲爱的念一！</h1>
+    </header>
+
+    <section class="message">
+        <h2>祝福：</h2>
+        <p>祝念一的每一个明日都明朗，能够走在自己的路上，渐入佳境。</p>
+        <p>祝你喜乐，不止此时。</p>
+    </section>
+
+    <section class="gift">
+        <h2>生日礼物：</h2>
+        <pre>
+#include &lt;stdio.h&gt;
+#include &lt;Windows.h&gt;
+
+int main() {
+    system("color fc");
+    float x, y, a;
+    for(y = 1.5f; y > -1; y -= 0.1f) {
+        for(x = -1.5f; x < 1.5f; x += .05f) {
+            a = x * x + y * y - 1;
+            putchar(a * a * a - x * x * y * y * y < 0.0f ? '*' : ' ');
+        }
+        Sleep(15);
+        putchar('\n');
+    }
+    printf("\n\n\t\t祝念一生日快乐！昭昭如愿，岁岁安澜！\n");
+    return 0; 
+}
+        </pre>
+        <p>这段 C 语言代码会在终端中绘制一个漂亮的爱心图案哦(●ˇ∀ˇ●)</p>
+    </section>
+
+    <!-- 视频部分 -->
+    <section class="video">
+        <h2>爱心代码演示：</h2>
+        <video controls width="100%">
+            <source src="生日快乐.mp4" type="video/mp4">
+            <!-- 可以添加多个源格式以兼容不同浏览器 -->
+            <source src="生日快乐.webm" type="video/webm">
+            <source src="生日快乐.ogg" type="video/ogg">
+            您的浏览器不支持视频播放，请更新浏览器。
+        </video>
+    </section>
+
+    <footer>
+        <p>&copy; 祝2024的念一生日快乐</p>
+    </footer>
+</body>
+</html>
